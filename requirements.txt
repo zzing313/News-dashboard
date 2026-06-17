@@ -1,0 +1,10 @@
+streamlit
+pandas
+requests
+beautifulsoup4
+openpyxl
+plotly
+wordcloud
+konlpy
+python-dotenv
+lxml
