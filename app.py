@@ -374,7 +374,6 @@ if st.session_state.current_page == "대시보드":
     m_col1, m_col2, m_col3 = st.columns([1.5, 1.5, 1.2])
 
     with m_col1:
-        st.markdown("<div class='plot-container'>", unsafe_allow_html=True)
         st.markdown("<h4>키워드별 기사 수 TOP 10</h4>", unsafe_allow_html=True)
         bar_data = pd.DataFrame({
             '키워드': ['FIT', '중국관광', '항공', 'K-뷰티', '호텔', '면세점', '명품', '여행수요', 'MZ세대', '환율'][::-1],
@@ -387,7 +386,6 @@ if st.session_state.current_page == "대시보드":
         st.markdown("</div>", unsafe_allow_html=True)
 
     with m_col2:
-        st.markdown("<div class='plot-container'>", unsafe_allow_html=True)
         st.markdown("<h4>키워드 언급 빈도 (워드클라우드)</h4>", unsafe_allow_html=True)
         words = {'중국관광객': 156, '면세점': 120, '항공': 90, '명품': 85, 'FIT': 70, 'K-뷰티': 65, '관광': 60, '호텔': 40, '여행': 35}
         wc = WordCloud(font_path='MALGUN.TTF', background_color='white', width=400, height=300, colormap='tab10').generate_from_frequencies(words)
@@ -398,7 +396,6 @@ if st.session_state.current_page == "대시보드":
         st.markdown("</div>", unsafe_allow_html=True)
 
     with m_col3:
-        st.markdown("<div class='plot-container'>", unsafe_allow_html=True)
         st.markdown("<h4>신세계면세점 기사 점유율 (SOV)</h4>", unsafe_allow_html=True)
         sov_data = pd.DataFrame({
             '브랜드': ['신세계면세점', '신라면세점', '롯데면세점', '현대면세점', '기타'],
@@ -415,7 +412,6 @@ if st.session_state.current_page == "대시보드":
     b_col1, b_col2, b_col3 = st.columns([1, 1, 1])
 
     with b_col1:
-        st.markdown("<div class='plot-container' style='height: 350px;'>", unsafe_allow_html=True)
         st.markdown("<h4>기사 감성 분석</h4>", unsafe_allow_html=True)
         sent_counts = df_all['감성'].value_counts().reindex(['긍정', '중립', '부정'], fill_value=0)
         total_sent = len(df_all) if len(df_all) > 0 else 1
@@ -450,7 +446,6 @@ if st.session_state.current_page == "대시보드":
         st.markdown("</div>", unsafe_allow_html=True)
 
     with b_col2:
-        st.markdown("<div class='plot-container' style='height: 350px; overflow: hidden;'>", unsafe_allow_html=True)
         st.markdown("<h4>기자별 기사 작성 현황 TOP 5</h4>", unsafe_allow_html=True)
         top_reporters = df_all['기자명'].value_counts().head(5).reset_index()
         top_reporters.columns = ['기자명', '기사 수(건)']
