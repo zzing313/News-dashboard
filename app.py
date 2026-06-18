@@ -11,7 +11,7 @@ import random
 # ==========================================
 # PAGE CONFIG & CSS
 # ==========================================
-st.set_page_config(page_title="AI 홍보 뉴스 모니터링 대시보드", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="SSGDF 뉴스 모니터링 대시보드", layout="wide", initial_sidebar_state="expanded")
 
 # Custom CSS
 st.markdown("""
