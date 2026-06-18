@@ -390,7 +390,7 @@ if st.session_state.current_page == "대시보드":
         st.markdown("<div class='plot-container'>", unsafe_allow_html=True)
         st.markdown("<h4>키워드 언급 빈도 (워드클라우드)</h4>", unsafe_allow_html=True)
         words = {'중국관광객': 156, '면세점': 120, '항공': 90, '명품': 85, 'FIT': 70, 'K-뷰티': 65, '관광': 60, '호텔': 40, '여행': 35}
-        wc = WordCloud(font_path='MALGUN.ttf', background_color='white', width=400, height=300, colormap='tab10').generate_from_frequencies(words)
+        wc = WordCloud(font_path='MALGUN.TTF', background_color='white', width=400, height=300, colormap='tab10').generate_from_frequencies(words)
         fig_wc, ax_wc = plt.subplots(figsize=(5, 4))
         ax_wc.imshow(wc, interpolation='bilinear')
         ax_wc.axis('off')
