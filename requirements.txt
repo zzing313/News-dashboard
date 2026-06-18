@@ -8,3 +8,4 @@ wordcloud
 konlpy
 python-dotenv
 lxml
+xlrd
